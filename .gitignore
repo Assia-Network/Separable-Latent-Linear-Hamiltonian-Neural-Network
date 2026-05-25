@@ -7,5 +7,5 @@
 Data/dt_0.01/
 Data/dt_0.0005/
 
-"results analysis"/**
-results\ analysis/**
+"results analysis"/**/*.npz
+results\ analysis/**/*.npz
