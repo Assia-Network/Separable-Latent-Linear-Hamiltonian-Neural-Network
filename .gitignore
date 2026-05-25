@@ -9,3 +9,6 @@ Data/dt_0.0005/
 
 "results analysis"/**/*.npz
 results\ analysis/**/*.npz
+
+"Data"/**/*.npz
+Data/**/*.npz
