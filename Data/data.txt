@@ -1,0 +1,17 @@
+====================================================================
+  SLL-HNN (Separable Latent Linear Hamiltonian Neural Network)
+====================================================================
+
+********************************************************************
+AUTHOR & CONTACT
+* Author: Jesús Martín Bautista Ramírez
+* Email: jesusmartinvery@gmail.com
+* LinkedIn: https://www.linkedin.com/in/jesus-bautista-ing-civil/
+********************************************************************
+
+====================================================================
+  DATA: Google Drive Link
+  -> Download the dataset from the link below and place it in this 
+     exact directory without changing the file structure:
+     https://drive.google.com/drive/folders/1rlm8TrfjIYMTOkHQy-ShBJi-f15LUHRI?usp=sharing
+====================================================================
