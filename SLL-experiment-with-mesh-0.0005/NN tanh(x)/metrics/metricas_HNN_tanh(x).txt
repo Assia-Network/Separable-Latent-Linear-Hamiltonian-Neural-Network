@@ -1,0 +1,501 @@
+
+        Iteración: 1/100
+        loss train      : 2.8772801648956747
+        loss test       : 1.7585480904371984
+        lr              : 0.0001
+        
+        Iteración: 2/100
+        loss train      : 1.2092275480501655
+        loss test       : 0.8056006120241711
+        lr              : 0.0001
+        
+        Iteración: 3/100
+        loss train      : 0.5770204349798355
+        loss test       : 0.40216765762465306
+        lr              : 0.0001
+        
+        Iteración: 4/100
+        loss train      : 0.295392523899227
+        loss test       : 0.21375079834816227
+        lr              : 0.0001
+        
+        Iteración: 5/100
+        loss train      : 0.16261629264025435
+        loss test       : 0.1241268680608914
+        lr              : 0.0001
+        
+        Iteración: 6/100
+        loss train      : 0.09521158404610942
+        loss test       : 0.072276868472052
+        lr              : 0.0001
+        
+        Iteración: 7/100
+        loss train      : 0.0508924424407183
+        loss test       : 0.03476255078379287
+        lr              : 0.0001
+        
+        Iteración: 8/100
+        loss train      : 0.0211331046552069
+        loss test       : 0.01188793140191572
+        lr              : 0.0001
+        
+        Iteración: 9/100
+        loss train      : 0.005885535382250545
+        loss test       : 0.0023493346765475404
+        lr              : 0.0001
+        
+        Iteración: 10/100
+        loss train      : 0.0008378171812285139
+        loss test       : 0.000369721158912104
+        lr              : 0.0001
+        
+        Iteración: 11/100
+        loss train      : 0.00010901261594155432
+        loss test       : 0.00026155834373578084
+        lr              : 0.0001
+        
+        Iteración: 12/100
+        loss train      : 8.269590718816025e-05
+        loss test       : 0.0002179642561375252
+        lr              : 0.0001
+        
+        Iteración: 13/100
+        loss train      : 7.727201876094663e-05
+        loss test       : 0.00020718285669753394
+        lr              : 0.0001
+        
+        Iteración: 14/100
+        loss train      : 7.282208624897776e-05
+        loss test       : 0.0002138830425310463
+        lr              : 0.0001
+        
+        Iteración: 15/100
+        loss train      : 6.945607341876886e-05
+        loss test       : 0.0002013379966473264
+        lr              : 0.0001
+        
+        Iteración: 16/100
+        loss train      : 6.650496341170654e-05
+        loss test       : 0.00018035845769529566
+        lr              : 0.0001
+        
+        Iteración: 17/100
+        loss train      : 6.41063106004782e-05
+        loss test       : 0.00019796308400639952
+        lr              : 0.0001
+        
+        Iteración: 18/100
+        loss train      : 6.213434150620114e-05
+        loss test       : 0.0001822994623679842
+        lr              : 0.0001
+        
+        Iteración: 19/100
+        loss train      : 6.04283035485604e-05
+        loss test       : 0.000172606696791029
+        lr              : 0.0001
+        
+        Iteración: 20/100
+        loss train      : 5.902758736438354e-05
+        loss test       : 0.0001944109240623876
+        lr              : 0.0001
+        
+        Iteración: 21/100
+        loss train      : 5.7419783604165056e-05
+        loss test       : 0.00017869589177733008
+        lr              : 0.0001
+        
+        Iteración: 22/100
+        loss train      : 5.633313612149267e-05
+        loss test       : 0.000160804712875014
+        lr              : 0.0001
+        
+        Iteración: 23/100
+        loss train      : 5.5369217443382566e-05
+        loss test       : 0.00017469401722084457
+        lr              : 0.0001
+        
+        Iteración: 24/100
+        loss train      : 5.433562504852297e-05
+        loss test       : 0.00014577338680854104
+        lr              : 0.0001
+        
+        Iteración: 25/100
+        loss train      : 5.350807124837324e-05
+        loss test       : 0.00014426118332180567
+        lr              : 0.0001
+        
+        Iteración: 26/100
+        loss train      : 5.2888790510668365e-05
+        loss test       : 0.00013533894444170048
+        lr              : 0.0001
+        
+        Iteración: 27/100
+        loss train      : 5.2006844579858256e-05
+        loss test       : 0.0001506290998584733
+        lr              : 0.0001
+        
+        Iteración: 28/100
+        loss train      : 5.110576459171023e-05
+        loss test       : 0.00013526303899528977
+        lr              : 0.0001
+        
+        Iteración: 29/100
+        loss train      : 5.069443529400796e-05
+        loss test       : 0.00015805512906105147
+        lr              : 0.0001
+        
+        Iteración: 30/100
+        loss train      : 5.0137894660595476e-05
+        loss test       : 0.00016217405307725896
+        lr              : 0.0001
+        
+        Iteración: 31/100
+        loss train      : 4.9615943576027607e-05
+        loss test       : 0.00015254731055757556
+        lr              : 0.0001
+        
+        Iteración: 32/100
+        loss train      : 4.914846023494956e-05
+        loss test       : 0.0001405868551185996
+        lr              : 0.0001
+        
+        Iteración: 33/100
+        loss train      : 4.8601084773961774e-05
+        loss test       : 0.00014510880543404164
+        lr              : 0.0001
+        
+        Iteración: 34/100
+        loss train      : 4.81720866267124e-05
+        loss test       : 0.0001336687622310201
+        lr              : 0.0001
+        
+        Iteración: 35/100
+        loss train      : 4.78628273251233e-05
+        loss test       : 0.00012785297811504826
+        lr              : 0.0001
+        
+        Iteración: 36/100
+        loss train      : 4.7264423977633404e-05
+        loss test       : 0.00014978205531090502
+        lr              : 0.0001
+        
+        Iteración: 37/100
+        loss train      : 4.6923483905954123e-05
+        loss test       : 0.00012652203328962166
+        lr              : 0.0001
+        
+        Iteración: 38/100
+        loss train      : 4.673357952869144e-05
+        loss test       : 0.00013799332769645685
+        lr              : 0.0001
+        
+        Iteración: 39/100
+        loss train      : 4.639791717624675e-05
+        loss test       : 0.00014397345443786387
+        lr              : 0.0001
+        
+        Iteración: 40/100
+        loss train      : 4.594507476507916e-05
+        loss test       : 0.0001497055111007809
+        lr              : 0.0001
+        
+        Iteración: 41/100
+        loss train      : 4.568830103116142e-05
+        loss test       : 0.0001254004617536764
+        lr              : 0.0001
+        
+        Iteración: 42/100
+        loss train      : 4.5397136148729436e-05
+        loss test       : 0.00013369081639682493
+        lr              : 0.0001
+        
+        Iteración: 43/100
+        loss train      : 4.5181352660672834e-05
+        loss test       : 0.00012939109314489696
+        lr              : 0.0001
+        
+        Iteración: 44/100
+        loss train      : 4.481872000816997e-05
+        loss test       : 0.00013683948771656717
+        lr              : 0.0001
+        
+        Iteración: 45/100
+        loss train      : 4.451857125192649e-05
+        loss test       : 0.00013054517552937183
+        lr              : 0.0001
+        
+        Iteración: 46/100
+        loss train      : 4.430711811680026e-05
+        loss test       : 0.00011942660045952737
+        lr              : 0.0001
+        
+        Iteración: 47/100
+        loss train      : 4.411310788495223e-05
+        loss test       : 0.00011793400370791695
+        lr              : 0.0001
+        
+        Iteración: 48/100
+        loss train      : 4.390297394182849e-05
+        loss test       : 0.00013762835694252002
+        lr              : 0.0001
+        
+        Iteración: 49/100
+        loss train      : 4.37428115876387e-05
+        loss test       : 0.00012624847211123127
+        lr              : 0.0001
+        
+        Iteración: 50/100
+        loss train      : 4.3319947598583e-05
+        loss test       : 0.00013546870538835802
+        lr              : 0.0001
+        
+        Iteración: 51/100
+        loss train      : 4.341617831199203e-05
+        loss test       : 0.00013513146192957137
+        lr              : 0.0001
+        
+        Iteración: 52/100
+        loss train      : 4.288247789664812e-05
+        loss test       : 0.0001236772989714406
+        lr              : 0.0001
+        
+        Iteración: 53/100
+        loss train      : 4.2733547352334774e-05
+        loss test       : 0.00011782898403648702
+        lr              : 0.0001
+        
+        Iteración: 54/100
+        loss train      : 4.285023854870913e-05
+        loss test       : 0.00011260586450586697
+        lr              : 0.0001
+        
+        Iteración: 55/100
+        loss train      : 4.237258788201366e-05
+        loss test       : 0.00014010606506040414
+        lr              : 0.0001
+        
+        Iteración: 56/100
+        loss train      : 4.215877783767699e-05
+        loss test       : 0.00015635408361782714
+        lr              : 0.0001
+        
+        Iteración: 57/100
+        loss train      : 4.216736898922721e-05
+        loss test       : 0.0001153747120064992
+        lr              : 0.0001
+        
+        Iteración: 58/100
+        loss train      : 4.2037752978955166e-05
+        loss test       : 0.00012387853511838817
+        lr              : 0.0001
+        
+        Iteración: 59/100
+        loss train      : 4.1792496358162155e-05
+        loss test       : 0.0001231716980790065
+        lr              : 0.0001
+        
+        Iteración: 60/100
+        loss train      : 4.1444274997312185e-05
+        loss test       : 0.00011049846732391082
+        lr              : 0.0001
+        
+        Iteración: 61/100
+        loss train      : 4.1479138108125705e-05
+        loss test       : 0.00012035019054526592
+        lr              : 0.0001
+        
+        Iteración: 62/100
+        loss train      : 4.13068158491046e-05
+        loss test       : 0.00012384810126616022
+        lr              : 0.0001
+        
+        Iteración: 63/100
+        loss train      : 4.1126396801158865e-05
+        loss test       : 0.0001272396402398239
+        lr              : 0.0001
+        
+        Iteración: 64/100
+        loss train      : 4.103571146289143e-05
+        loss test       : 0.0001147435718593717
+        lr              : 0.0001
+        
+        Iteración: 65/100
+        loss train      : 4.099742564485971e-05
+        loss test       : 0.00011306647196066927
+        lr              : 0.0001
+        
+        Iteración: 66/100
+        loss train      : 4.071007972600454e-05
+        loss test       : 0.00012749037920522537
+        lr              : 0.0001
+        
+        Iteración: 67/100
+        loss train      : 4.039815483467285e-05
+        loss test       : 0.00011609246475989169
+        lr              : 0.0001
+        
+        Iteración: 68/100
+        loss train      : 4.0508685094998173e-05
+        loss test       : 0.00012519663375805035
+        lr              : 0.0001
+        
+        Iteración: 69/100
+        loss train      : 4.034504389232178e-05
+        loss test       : 0.00011737750261723682
+        lr              : 0.0001
+        
+        Iteración: 70/100
+        loss train      : 4.0174701008979995e-05
+        loss test       : 0.00012637488400106832
+        lr              : 0.0001
+        
+        Iteración: 71/100
+        loss train      : 3.995394307951868e-05
+        loss test       : 0.00013548671207316577
+        lr              : 0.0001
+        
+        Iteración: 72/100
+        loss train      : 4.0018476883231934e-05
+        loss test       : 0.00010803590179312579
+        lr              : 0.0001
+        
+        Iteración: 73/100
+        loss train      : 3.977896245283478e-05
+        loss test       : 0.00011378448950524894
+        lr              : 0.0001
+        
+        Iteración: 74/100
+        loss train      : 3.9698358366930185e-05
+        loss test       : 0.00010893478853138015
+        lr              : 0.0001
+        
+        Iteración: 75/100
+        loss train      : 3.959353305307197e-05
+        loss test       : 0.00010580292121383663
+        lr              : 0.0001
+        
+        Iteración: 76/100
+        loss train      : 3.942419797898532e-05
+        loss test       : 0.00013145450198005784
+        lr              : 0.0001
+        
+        Iteración: 77/100
+        loss train      : 3.940894836602177e-05
+        loss test       : 0.00011209096307178139
+        lr              : 0.0001
+        
+        Iteración: 78/100
+        loss train      : 3.9235862193472284e-05
+        loss test       : 0.00010751012721509372
+        lr              : 0.0001
+        
+        Iteración: 79/100
+        loss train      : 3.911015205864846e-05
+        loss test       : 0.00011196885777760296
+        lr              : 0.0001
+        
+        Iteración: 80/100
+        loss train      : 3.9047231735873086e-05
+        loss test       : 0.00012617650272205735
+        lr              : 0.0001
+        
+        Iteración: 81/100
+        loss train      : 3.903346037417727e-05
+        loss test       : 0.00010707083194054364
+        lr              : 0.0001
+        
+        Iteración: 82/100
+        loss train      : 3.873533444491137e-05
+        loss test       : 0.00011484971417342339
+        lr              : 0.0001
+        
+        Iteración: 83/100
+        loss train      : 3.8701603450239927e-05
+        loss test       : 0.00011426758519233149
+        lr              : 0.0001
+        
+        Iteración: 84/100
+        loss train      : 3.870482106145333e-05
+        loss test       : 0.00011270609003138916
+        lr              : 0.0001
+        
+        Iteración: 85/100
+        loss train      : 3.846327907574247e-05
+        loss test       : 0.00011730299064144444
+        lr              : 0.0001
+        
+        Iteración: 86/100
+        loss train      : 3.8363350106571994e-05
+        loss test       : 0.00010937538047574285
+        lr              : 0.0001
+        
+        Iteración: 87/100
+        loss train      : 3.830204404817283e-05
+        loss test       : 0.00012367446769734734
+        lr              : 0.0001
+        
+        Iteración: 88/100
+        loss train      : 3.8199486459204913e-05
+        loss test       : 0.00012442757800733162
+        lr              : 0.0001
+        
+        Iteración: 89/100
+        loss train      : 3.822034902981861e-05
+        loss test       : 0.00011749164790022722
+        lr              : 0.0001
+        
+        Iteración: 90/100
+        loss train      : 3.8019991915606275e-05
+        loss test       : 0.0001270521159540105
+        lr              : 0.0001
+        
+        Iteración: 91/100
+        loss train      : 3.787170371072781e-05
+        loss test       : 0.0001228905712031721
+        lr              : 0.0001
+        
+        Iteración: 92/100
+        loss train      : 3.789492603323778e-05
+        loss test       : 0.0001222886699618652
+        lr              : 0.0001
+        
+        Iteración: 93/100
+        loss train      : 3.793487868062228e-05
+        loss test       : 0.00011145855653514082
+        lr              : 0.0001
+        
+        Iteración: 94/100
+        loss train      : 3.746390921623299e-05
+        loss test       : 9.819504903534159e-05
+        lr              : 0.0001
+        
+        Iteración: 95/100
+        loss train      : 3.7607777757091106e-05
+        loss test       : 0.00010486291115354575
+        lr              : 0.0001
+        
+        Iteración: 96/100
+        loss train      : 3.74859762279369e-05
+        loss test       : 0.00010808435680014892
+        lr              : 0.0001
+        
+        Iteración: 97/100
+        loss train      : 3.740850003135138e-05
+        loss test       : 0.00010640566036216391
+        lr              : 0.0001
+        
+        Iteración: 98/100
+        loss train      : 3.727367613684907e-05
+        loss test       : 9.934102915035574e-05
+        lr              : 0.0001
+        
+        Iteración: 99/100
+        loss train      : 3.7250434833182676e-05
+        loss test       : 0.00014869680383459727
+        lr              : 0.0001
+        
+        Iteración: 100/100
+        loss train      : 3.712317892393663e-05
+        loss test       : 0.00011983321222374638
+        lr              : 0.0001
+        
