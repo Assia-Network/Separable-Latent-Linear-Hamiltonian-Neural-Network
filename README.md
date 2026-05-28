@@ -7,14 +7,48 @@ Este proyecto nace de una profunda curiosidad personal por comprender la física
 Aunque el aprendizaje profundo ha revolucionado la aproximación de funciones, descubrimos que los modelos convencionales ignoran el rigor matemático que exigen los sistemas celestes [[1]](#referencias). Por ello, el desarrollo de la arquitectura **SLL-HNN** está impulsado por dos necesidades fundamentales:
 
 * **Preservación Estricta de Invariantes Físicos:** La necesidad imperativa de respetar la coherencia dimensional y preservar la estructura simpléctica para evitar que el sistema disipe energía artificialmente durante simulaciones a escalas de tiempo astronómicas [[1]](#referencias).
-* **Superación de Límites Clásicos (El Problema del Mezclado):** Las Redes Neuronales Hamiltonianas (HNN) clásicas fallan al concatenar y mezclar arbitrariamente variables de posición ($q$) y momento ($p$) dentro de las mismas capas ocultas densas [[1]](#referencias). Este entrelazamiento destruye la consistencia de las unidades físicas, degradando la geometría del sistema y promoviendo una acumulación catastrófica de errores numéricos a largo plazo [[1]](#referencias).
+* **Superación de Límites Clásicos (El Problema del Mezclado):** Las Redes Neuronales Hamiltonianas (HNN) clásicas fallan al concatenar y mezclar arbitrariamente variables de posición ($q$) y momento ($p$) dentro de las mismas capas ocultas densas. Este entrelazamiento destruye la consistencia de las unidades físicas, degradando la geometría del sistema y promoviendo una acumulación catastrófica de errores numéricos a largo plazo [[1]](#referencias).
 
 ---
 
 ## 2. Experimentación Realizada
-* Evaluación de la red bajo diferentes resoluciones de mallas temporales (Δt=0.01 y Δt=0.0005).
-* Pruebas sistemáticas con múltiples funciones de activación pares frente a funciones impares (como tanh(x)) para verificar la estabilidad a largo plazo.
-* Implementación de un esquema de normalización múltiple independiente a nivel de grado de libertad para mitigar el problema de Alto Rango Dinámico (HDR).
+
+Este repositorio documenta de manera exclusiva el desarrollo, experimentación y validación de la arquitectura Separable Latent Linear Hamiltonian Neural Network (SLL-HNN). Este modelo constituye mi aporte individual a la investigación conjunta. En el artículo científico resultante, esta arquitectura se contrasta con el desarrollo paralelo propuesto por mi coautor para determinar el modelo global óptimo.
+
+Para evaluar la estabilidad a largo plazo y la robustez de la red frente a problemas de Alto Rango Dinámico (HDR), se implementó una estrategia de *time-splitting* sobre un conjunto de datos total de 4000 años: 3200 años para entrenamiento y 800 años para *testing* y evaluación. 
+
+A lo largo de los cuatro bloques de experimentación, los componentes base de la arquitectura (desacoplamiento estricto $T-V$, proyecciones de Hadamard en el espacio latente y la política estricta de no utilizar estabilizadores numéricos artificiales) se mantuvieron inalterables. Las variaciones se aplicaron únicamente sobre la topología interna y las funciones de activación:
+
+### Fases del Proceso Experimental
+
+#### Experimentación 1: Exploración Base (Malla Fina, $\Delta t = 0.0005$)
+* **Arquitectura:** 3 capas ocultas profundas de 256 neuronas cada una, con salida escalar para la energía potencial ($V$).
+* **Datos:** Alta densidad de información temporal.
+* **Funciones de Activación Evaluadas:** Exploración amplia utilizando $\log(\cosh(x))$, $\log(1+x\tanh(x))$, $x\tanh(x)$, $\sqrt{x^2+1}-1$, y $\tanh(x)$.
+* **Propósito:** Evaluar el impacto inicial de la paridad y la simetría geométrica sobre un volumen masivo de datos sin reducción temporal.
+
+#### Experimentación 2: Ajuste de Capacidad (Malla Gruesa, $\Delta t = 0.01$)
+* **Arquitectura:** 3 capas ocultas profundas, con el ancho ajustado a 240 neuronas por capa.
+* **Datos:** Reducción de datos en un factor de 20 mediante una discretización temporal más gruesa.
+* **Funciones de Activación Evaluadas:** Reducidas a las tres funciones más prometedoras: $\log(\cosh(x))$, $\log(1+x\tanh(x))$ y $\tanh(x)$.
+* **Propósito:** Analizar la sensibilidad del modelo y la acumulación de errores de truncamiento local ante una drástica reducción en la densidad de información temporal.
+
+#### Experimentación 3: Versión "Lite" (Malla Gruesa, $\Delta t = 0.01$)
+* **Arquitectura:** 3 capas ocultas profundas, con el ancho compactado a 128 neuronas por capa.
+* **Datos:** Reducción de datos en un factor de 20.
+* **Funciones de Activación Evaluadas:** Filtradas exclusivamente a las dos funciones pares de mayor rendimiento: $\log(\cosh(x))$ y $\log(1+x\tanh(x))$.
+* **Propósito:** Comprobar la viabilidad de un modelo con un menor número de parámetros por capa para retener la física del sistema sin perder el confinamiento orbital.
+
+#### Experimentación 4: Versión "Lite V2" (Malla Gruesa, $\Delta t = 0.01$) - Arquitectura Óptima
+* **Arquitectura:** Reducción estructural a 2 capas ocultas profundas, optimizadas con 256 neuronas cada una.
+* **Datos:** Reducción de datos en un factor de 20.
+* **Funciones de Activación Evaluadas:** Evaluación final entre las funciones de paridad par: $\log(\cosh(x))$ y $\log(1+x\tanh(x))$.
+* **Resultado:** Esta configuración se consolidó como la arquitectura definitiva para la contribución SLL-HNN al artículo científico. Demostró empíricamente que la restricción en la profundidad de la red (2 capas), compensada con un ancho adecuado, suprime de manera óptima el sobreajuste y la deriva numérica a lo largo de los siglos.
+
+---
+
+**Nota sobre la Consistencia de los Registros:** 
+Mientras que la publicación científica se enfoca en reportar los invariantes energéticos y gráficos para ventanas de integración de 400 años (específicamente de las experimentaciones 1 y 4), este repositorio contiene los códigos fuente y los registros de estabilidad completos correspondientes a los 800 años de *testing* para los cuatro ensayos experimentales descritos.
 
 ## 3. Flujograma de la Red (SLL-HNN)
 * **Mapeo Lineal:** Proyección lineal independiente punto a punto de las posiciones y momentos físicos hacia el espacio latente.
