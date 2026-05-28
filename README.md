@@ -1,8 +1,15 @@
 # SLL-HNN: Separable Latent Linear Hamiltonian Neural Networks para el Sistema Solar
 
 ## 1. Motivación
-* Necesidad de preservar invariantes físicos y la coherencia dimensional en la simulación del sistema gravitacional de N-cuerpos.
-* Limitaciones de las HNN clásicas al mezclar variables de posición y momento en las mismas capas, lo que degrada la geometría simpléctica y acumula errores numéricos.
+
+Este proyecto nace de una profunda curiosidad personal por comprender la física del universo y mi fascinación por el desarrollo de modelos de *Machine Learning* informados por la física. Explorar el cosmos a través del código siempre ha sido un objetivo para mí, pero al abordar el problema gravitacional de N-cuerpos en el Sistema Solar, me encontré con una brecha crítica en la mecánica computacional actual [[1]](#referencias).
+
+Aunque el aprendizaje profundo ha revolucionado la aproximación de funciones, descubrimos que los modelos convencionales ignoran el rigor matemático que exigen los sistemas celestes [[1]](#referencias). Por ello, el desarrollo de la arquitectura **SLL-HNN** está impulsado por dos necesidades fundamentales:
+
+* **Preservación Estricta de Invariantes Físicos:** La necesidad imperativa de respetar la coherencia dimensional y preservar la estructura simpléctica para evitar que el sistema disipe energía artificialmente durante simulaciones a escalas de tiempo astronómicas [[1]](#referencias).
+* **Superación de Límites Clásicos (El Problema del Mezclado):** Las Redes Neuronales Hamiltonianas (HNN) clásicas fallan al concatenar y mezclar arbitrariamente variables de posición ($q$) y momento ($p$) dentro de las mismas capas ocultas densas [[1]](#referencias). Este entrelazamiento destruye la consistencia de las unidades físicas, degradando la geometría del sistema y promoviendo una acumulación catastrófica de errores numéricos a largo plazo [[1]](#referencias).
+
+---
 
 ## 2. Experimentación Realizada
 * Evaluación de la red bajo diferentes resoluciones de mallas temporales (Δt=0.01 y Δt=0.0005).
@@ -38,3 +45,7 @@
 * **Autores:** Jae Hoon Lee y Jesus Martin Bautista Ramirez.
 * **Afiliaciones:** Open Stack Inc. / Universidad Peruana de Ciencias Aplicadas (UPC).
 * **DOI / Paper:** [Insertar enlace al paper]
+
+### <a name="referencias"></a> Referencias
+
+**[1]** Lee, J. H., & Bautista Ramirez, J. M. (En desarrollo). *Hamiltonian Neural Networks for Solar System*. Puedes consultar el código fuente, la experimentación completa y las actualizaciones de esta investigación en nuestro [Repositorio Oficial de GitHub](https://github.com/jae-hoon-daniel-lee/hamiltonian-neural-networks-for-solar-system).
