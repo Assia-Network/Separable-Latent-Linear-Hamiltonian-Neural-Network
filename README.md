@@ -68,7 +68,7 @@ El procesamiento de la arquitectura garantiza un desacoplamiento físico y dimen
   * *Energía Potencial ($ V $):* El flujo de posición latente ($\vec{\tilde{q}}$) ingresa a un Perceptrón Multicapa (MLP) continuo, el cual comprime la información y escupe finalmente un valor escalar representativo del potencial gravitacional.
   * *Energía Cinética ($ T $):* El flujo de momento latente ($\vec{\tilde{p}}$) interactúa con una formulación analítica paramétrica a través de una matriz de masa inversa aprendida ($M^{-1}$), resultando en el escalar de energía cinética.
 * **Fusión Hamiltoniana:** Ambos escalares convergen y se suman coherentemente para formar el Hamiltoniano latente aditivo ($H = T + V$).
-* **Predicción (Autograd Simpléctico):** Extracción de gradientes simplécticos mediante diferenciación automática. El sistema deriva el Hamiltoniano respecto a los estados latentes ($\dot{\vec{r}}\sb{\mathrm{lat}} = \frac{dH}{d\vec{p}}$ y $\dot{\vec{p}}\sb{\mathrm{lat}} = -\frac{dH}{d\vec{r}}$).
+* **Predicción (Autograd Simpléctico):** Extracción de gradientes simplécticos mediante diferenciación automática. El sistema deriva el Hamiltoniano respecto a los estados latentes ($\dot{{\vec{r}}}\_{\text{lat}} = \frac{dH}{d\vec{p}}$ y $\dot{{\vec{p}}}\_{\text{lat}} = -\frac{dH}{d\vec{r}}$).
 * **Escalado Inverso (Denormalización):** Las derivadas latentes resultantes pasan por una transformación lineal puramente multiplicativa (estrictamente sin matriz de sesgo) y son multiplicadas por sus tensores de escala de salida ($S_{\dot{r}}$, $S_{\dot{p}}$) para entregar las predicciones dinámicas y cinemáticas físicas finales en su magnitud real.
 
 ## 4. Descripción del Mejor Modelo
