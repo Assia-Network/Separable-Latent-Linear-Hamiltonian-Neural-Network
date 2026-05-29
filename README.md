@@ -53,7 +53,7 @@ Mientras que la publicación científica se enfoca en reportar los invariantes e
 ## 3. Flujograma de la Red (SLL-HNN)
 
 <div align="center">
-  <video src="media/SLL-HNN/SLLHNNFlowchartAnimation.mp4" autoplay loop muted playsinline width="80%"></video>
+  <video src="media SLL-HNN/SLLHNNFlowchartAnimation.mp4" autoplay loop muted playsinline width="80%"></video>
   <br>
   <em>Animación del flujo físico y matemático a través de la arquitectura SLL-HNN.</em>
 </div>
