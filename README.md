@@ -53,11 +53,11 @@ Mientras que la publicación científica se enfoca en reportar los invariantes e
 ## 3. Flujograma de la Red (SLL-HNN)
 
 <div align="center">
-  <img src="media/SLL-HNN/SLLHNNFlowchartAnimation.gif" width="100%" alt="Flujograma SLL-HNN">
-  <br>
-  <em>Animación del flujo físico y matemático a través de la arquitectura SLL-HNN.</em>
+
+![Animación del flujo de la Arquitectura SLL-HNN](media/SLL-HNN/SLLHNNFlowchartAnimation.gif)
+
+*Animación del flujo físico y matemático a través de la arquitectura SLL-HNN.*
 </div>
-<br>
 
 El procesamiento de la arquitectura garantiza un desacoplamiento físico y dimensional estricto, estructurado en las siguientes etapas fundamentales:
 
