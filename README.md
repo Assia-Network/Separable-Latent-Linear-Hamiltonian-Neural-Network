@@ -51,9 +51,24 @@ A lo largo de los cuatro bloques de experimentación, los componentes base de la
 Mientras que la publicación científica se enfoca en reportar los invariantes energéticos y gráficos para ventanas de integración de 400 años (específicamente de las experimentaciones 1 y 4), este repositorio contiene los códigos fuente y los registros de estabilidad completos correspondientes a los 800 años de *testing* para los cuatro ensayos experimentales descritos.
 
 ## 3. Flujograma de la Red (SLL-HNN)
-* **Mapeo Lineal:** Proyección lineal independiente punto a punto de las posiciones y momentos físicos hacia el espacio latente.
-* **Desacoplamiento:** Cálculo separado de las energías para formar el Hamiltoniano latente aditivo (H = T + V).
-* **Predicción:** Extracción de gradientes simplécticos mediante diferenciación automática y escalado inverso para las predicciones dinámicas y cinemáticas.
+
+<div align="center">
+  <video src="media/SLL-HNN/SLLHNNFlowchartAnimation.mp4" autoplay loop muted playsinline width="80%"></video>
+  <br>
+  <em>Animación del flujo físico y matemático a través de la arquitectura SLL-HNN.</em>
+</div>
+<br>
+
+El procesamiento de la arquitectura garantiza un desacoplamiento físico y dimensional estricto, estructurado en las siguientes etapas fundamentales:
+
+* **Normalización Vectorial:** Los vectores de entrada físicos correspondientes a las posiciones ($\vec{q}$) y momentos ($\vec{p}$) se normalizan inicialmente de acuerdo con el mallado de los datos, dividiéndose por sus respectivos tensores de escala ($S_q$ y $S_p$).
+* **Mapeo Lineal (Transformador de Fase):** Proyección lineal independiente punto a punto hacia el espacio latente. Cada variable normalizada atraviesa un transformador de fase lineal ($\odot W + b$) para permitir una calibración paramétrica autónoma por cada grado de libertad.
+* **Desacoplamiento Energético:** Cálculo totalmente separado de las energías fundamentales para evitar el entrelazamiento de unidades:
+  * *Energía Potencial ($V$):* El flujo de posición latente ($\vec{\tilde{q}}$) ingresa a un Perceptrón Multicapa (MLP) continuo, el cual comprime la información y escupe finalmente un valor escalar representativo del potencial gravitacional.
+  * *Energía Cinética ($T$):* El flujo de momento latente ($\vec{\tilde{p}}$) interactúa con una formulación analítica paramétrica a través de una matriz de masa inversa aprendida ($M^{-1}$), resultando en el escalar de energía cinética.
+* **Fusión Hamiltoniana:** Ambos escalares convergen y se suman coherentemente para formar el Hamiltoniano latente aditivo ($H = T + V$).
+* **Predicción (Autograd Simpléctico):** Extracción de gradientes simplécticos mediante diferenciación automática. El sistema deriva el Hamiltoniano respecto a los estados latentes $\left( \dot{\vec{r}}_{\text{lat}} = \frac{dH}{d\vec{p}} \text{ y } \dot{\vec{p}}_{\text{lat}} = -\frac{dH}{d\vec{r}} \right)$.
+* **Escalado Inverso (Denormalización):** Las derivadas latentes resultantes pasan por una transformación lineal puramente multiplicativa (estrictamente sin matriz de sesgo) y son multiplicadas por sus tensores de escala de salida ($S_{\dot{r}}$, $S_{\dot{p}}$) para entregar las predicciones dinámicas y cinemáticas físicas finales en su magnitud real.
 
 ## 4. Descripción del Mejor Modelo
 * Arquitectura SLL-HNN compacta y optimizada a solo dos capas ocultas profundas de 256 neuronas.
