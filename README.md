@@ -53,7 +53,7 @@ A lo largo de los cuatro bloques de experimentación, los componentes base de la
 
 <div align="center">
 
-![Animación del flujo de la Arquitectura SLL-HNN](media%20SLL-HNN/SLLHNNFlowchartAnimation.gif)
+![Animación del flujo de la Arquitectura SLL-HNN](media%20SLL-HNN/SLLHNNFlowchartAnimation.mp4)
 
 *Animación del flujo físico y matemático a través de la arquitectura SLL-HNN.*
 
