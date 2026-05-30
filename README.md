@@ -7,7 +7,7 @@ Este proyecto nace de una profunda curiosidad personal por comprender la física
 Aunque el aprendizaje profundo ha revolucionado la aproximación de funciones, los modelos convencionales ignoran el rigor matemático que exigen los sistemas celestes [[1]](#referencias). Como una variante paralela a la arquitectura base Plausible HNN (P-HNN), el desarrollo de la arquitectura SLL-HNN está impulsado por dos necesidades fundamentales:
 
 * **Preservación Estricta de Invariantes Físicos:** La necesidad imperativa de respetar la coherencia dimensional y preservar la estructura simpléctica para evitar que el sistema disipe energía artificialmente durante simulaciones a escalas de tiempo astronómicas.
-* **Superación de Límites Clásicos (El Problema del Mezclado):** Las Redes Neuronales Hamiltonianas (HNN) clásicas fallan al concatenar y mezclar arbitrariamente variables de posición (q) y momento (p) dentro de las mismas capas ocultas densas. Este entrelazamiento destruye la consistencia de las unidades físicas, degradando la geometría del sistema y promoviendo una acumulación catastrófica de errores numéricos a largo plazo.
+* **Superación de Límites Clásicos (El Problema del Mezclado):** Las Redes Neuronales Hamiltonianas (HNN) clásicas fallan al concatenar y mezclar arbitrariamente variables de posición ($q$) y momento ($p$) dentro de las mismas capas ocultas densas. Este entrelazamiento destruye la consistencia de las unidades físicas, degradando la geometría del sistema y promoviendo una acumulación catastrófica de errores numéricos a largo plazo.
 
 ---
 
@@ -17,29 +17,29 @@ Este repositorio documenta de manera exclusiva el desarrollo, experimentación y
 
 Para evaluar la estabilidad a largo plazo y la robustez de la red frente a problemas de Alto Rango Dinámico (HDR), se implementó una estrategia de time-splitting sobre un conjunto de datos total de 4000 años: 3200 años para entrenamiento y 800 años para testing y evaluación. 
 
-A lo largo de los cuatro bloques de experimentación, los componentes base de la arquitectura (desacoplamiento estricto T-V, proyecciones de Hadamard en el espacio latente y la estricta política de no utilizar estabilizadores numéricos artificiales) se mantuvieron inalterables. Las variaciones se aplicaron únicamente sobre la topología interna y las funciones de activación:
+A lo largo de los cuatro bloques de experimentación, los componentes base de la arquitectura (desacoplamiento estricto $T-V$, proyecciones de Hadamard en el espacio latente y la estricta política de no utilizar estabilizadores numéricos artificiales) se mantuvieron inalterables. Las variaciones se aplicaron únicamente sobre la topología interna y las funciones de activación:
 
 ### Fases del Proceso Experimental
 
-#### Experimentación 1: Exploración Base (Malla Fina, Δt = 0.0005)
-* **Arquitectura:** 3 capas ocultas profundas de 256 neuronas cada una, con salida escalar para la energía potencial (V).
+#### Experimentación 1: Exploración Base (Malla Fina, $\Delta t=0.0005$)
+* **Arquitectura:** 3 capas ocultas profundas de 256 neuronas cada una, con salida escalar para la energía potencial ($V$).
 * **Datos:** Alta densidad de información temporal.
-* **Funciones de Activación Evaluadas:** Exploración amplia utilizando log(cosh(x)), log(1 + x*tanh(x)), x*tanh(x), sqrt(x^2 + 1) - 1, y tanh(x).
+* **Funciones de Activación Evaluadas:** Exploración amplia utilizando $\log(\cosh(x))$, $\log(1+x\tanh(x))$, $x\tanh(x)$, $\sqrt{x^2+1}-1$, y $\tanh(x)$.
 * **Propósito:** Evaluar el impacto inicial de la paridad y la simetría geométrica sobre un volumen masivo de datos sin reducción temporal.
 
-#### Experimentación 2: Ajuste de Capacidad (Malla Gruesa, Δt = 0.01)
+#### Experimentación 2: Ajuste de Capacidad (Malla Gruesa, $\Delta t=0.01$)
 * **Arquitectura:** 3 capas ocultas profundas, con el ancho ajustado a 240 neuronas por capa.
 * **Datos:** Reducción de datos en un factor de 20 mediante una discretización temporal más gruesa.
-* **Funciones de Activación Evaluadas:** Reducidas a las tres funciones más prometedoras: log(cosh(x)), log(1 + x*tanh(x)) y tanh(x).
+* **Funciones de Activación Evaluadas:** Reducidas a las tres funciones más prometedoras: $\log(\cosh(x))$, $\log(1+x\tanh(x))$ y $\tanh(x)$.
 * **Propósito:** Analizar la sensibilidad del modelo y la acumulación de errores de truncamiento local ante una drástica reducción en la densidad de información temporal.
 
-#### Experimentación 3: Versión "Lite" (Malla Gruesa, Δt = 0.01)
+#### Experimentación 3: Versión "Lite" (Malla Gruesa, $\Delta t=0.01$)
 * **Arquitectura:** 3 capas ocultas profundas, con el ancho compactado a 128 neuronas por capa.
 * **Datos:** Reducción de datos en un factor de 20.
-* **Funciones de Activación Evaluadas:** Filtradas exclusivamente a las dos funciones pares de mayor rendimiento: log(cosh(x)) y log(1 + x*tanh(x)).
+* **Funciones de Activación Evaluadas:** Filtradas exclusivamente a las dos funciones pares de mayor rendimiento: $\log(\cosh(x))$ y $\log(1+x\tanh(x))$.
 * **Propósito:** Comprobar la viabilidad de un modelo con un menor número de parámetros por capa para retener la física del sistema sin perder el confinamiento orbital.
 
-#### Experimentación 4: Versión "Lite V2" (Malla Gruesa, Δt = 0.01) - Arquitectura Óptima
+#### Experimentación 4: Versión "Lite V2" (Malla Gruesa, $\Delta t=0.01$) - Arquitectura Óptima
 * **Arquitectura:** Reducción estructural a 2 capas ocultas profundas, optimizadas con 256 neuronas cada una.
 * **Datos:** Reducción de datos en un factor de 20.
 * **Funciones de Activación Evaluadas:** Evaluación final entre las funciones de paridad par.
@@ -52,39 +52,36 @@ A lo largo de los cuatro bloques de experimentación, los componentes base de la
 ## 3. Flujograma e Internos de la Red (SLL-HNN)
 
 <div align="center">
-
-![Animación del flujo de la Arquitectura SLL-HNN](media%20SLL-HNN/SLLHNNFlowchartAnimation.gif)
-
-*Animación del flujo físico y matemático a través de la arquitectura SLL-HNN.*
-
+  <a href="ENLACE_COMPLETO_DE_TU_VIDEO_DE_YOUTUBE" target="_blank">
+    <img src="https://img.youtube.com/vi/ID_DE_TU_VIDEO/maxresdefault.jpg" alt="Animación del flujo de la Arquitectura SLL-HNN">
+  </a>
+  <p><em>Animación del flujo físico y matemático a través de la arquitectura SLL-HNN. Haz clic en la imagen para ver el video.</em></p>
 </div>
 
 El procesamiento de la arquitectura garantiza un desacoplamiento físico y dimensional estricto, estructurado en las siguientes etapas fundamentales:
 
-* **Normalización Vectorial:** Los vectores de entrada físicos correspondientes a las posiciones (q) y momentos (p) se normalizan inicialmente de acuerdo con el mallado de los datos, dividiéndose por sus respectivos tensores de escala (S_q y S_p).
-* **Mapeo Lineal (Transformador de Fase):** Proyección lineal independiente punto a punto hacia el espacio latente. Cada variable normalizada atraviesa un transformador de fase lineal (⊙ W + b) para permitir una calibración paramétrica autónoma por cada grado de libertad.
+* **Normalización Vectorial:** Los vectores de entrada físicos correspondientes a las posiciones ($\vec{q}$) y momentos ($\vec{p}$) se normalizan inicialmente dividiéndose por sus respectivos tensores escalares de valores máximos absolutos ($\max(|q|)$ y $\max(|p|)$).
+* **Mapeo Lineal (Transformador de Fase):** Proyección lineal independiente punto a punto hacia el espacio latente. Cada variable normalizada atraviesa un transformador de fase lineal ($\odot W+b$) para permitir una calibración paramétrica autónoma por cada grado de libertad.
 * **Desacoplamiento Energético:** Cálculo totalmente separado de las energías fundamentales para evitar el entrelazamiento de unidades:
-  * *Energía Potencial (V):* El flujo de posición latente (q_lat) ingresa a un Perceptrón Multicapa (MLP) continuo, el cual comprime la información y escupe finalmente un valor escalar representativo del potencial gravitacional.
-  * *Energía Cinética (T):* El flujo de momento latente (p_lat) interactúa con una formulación analítica paramétrica a través de una matriz de masa inversa aprendida (M^-1), resultando en el escalar de energía cinética.
-* **Fusión Hamiltoniana:** Ambos escalares convergen y se suman coherentemente para formar el Hamiltoniano latente aditivo (H = T + V).
-* **Predicción (Autograd Simpléctico):** Extracción de gradientes simplécticos mediante diferenciación automática. El sistema deriva el Hamiltoniano respecto a los estados latentes (dq_lat/dt = dH/dp y dp_lat/dt = -dH/dq).
-* **Escalado Inverso (Denormalización):** Las derivadas latentes resultantes pasan por una transformación lineal puramente multiplicativa (estrictamente sin matriz de sesgo) y son multiplicadas por sus tensores de escala de salida (S_dq, S_dp) para entregar las predicciones dinámicas y cinemáticas físicas finales.
+  * *Energía Potencial ($V$):* El flujo de posición latente ($\tilde{q}$) ingresa a un Perceptrón Multicapa (MLP) continuo, el cual comprime la información y escupe finalmente un valor escalar representativo del potencial gravitacional.
+  * *Energía Cinética ($T$):* El flujo de momento latente ($\tilde{p}$) interactúa con una formulación analítica paramétrica a través de una matriz de masa inversa aprendida ($M^{-1}$), resultando en el escalar de energía cinética.
+* **Fusión Hamiltoniana:** Ambos escalares convergen y se suman coherentemente para formar el Hamiltoniano latente aditivo ($H=T+V$).
+* **Predicción (Autograd Simpléctico):** Extracción de gradientes simplécticos mediante diferenciación automática. El sistema deriva el Hamiltoniano respecto a los estados latentes ($\dot{\tilde{q}}=\frac{\partial H}{\partial\tilde{p}}$ y $\dot{\tilde{p}}=-\frac{\partial H}{\partial\tilde{q}}$).
+* **Escalado Inverso (Denormalización):** Las derivadas latentes resultantes pasan por una transformación lineal puramente multiplicativa (estrictamente sin matriz de sesgo) y son multiplicadas por sus factores de escala de salida ($\max(|\dot{q}|)$ y $\max(|\dot{p}|)$) para entregar las predicciones dinámicas y cinemáticas físicas finales.
 
 ### Visualización del Entrenamiento y Pesos Lineales
 
 A continuación se detalla el comportamiento interno de la red durante el proceso de optimización del mejor modelo (Experimentación 4):
 
 <div align="center">
+  <img src="media%20SLL-HNN/loss.png" alt="Curva de Pérdida del SLL-HNN">
+  <p><em>Evolución de la función de pérdida durante 1000 épocas para la arquitectura óptima SLL-HNN de 2 capas.</em></p>
 
-![Curva de Pérdida del SLL-HNN](media%20SLL-HNN/loss.png)
-*Evolución de la función de pérdida durante 1000 épocas para la arquitectura óptima SLL-HNN de 2 capas.*
+  <img src="media%20SLL-HNN/SLL_W_B.png" alt="Pesos Lineales y Sesgo del Encoder">
+  <p><em>Distribución de la matriz de pesos lineales y sesgo (bias) en la fase de codificación (Encoder) hacia el espacio latente.</em></p>
 
-![Pesos Lineales y Sesgo del Encoder](media%20SLL-HNN/SLL_W_B.png)
-*Distribución de la matriz de pesos lineales y sesgo (bias) en la fase de codificación (Encoder) hacia el espacio latente.*
-
-![Pesos Lineales del Decoder](media%20SLL-HNN/SLL_W_dot.png)
-*Matrices de pesos correspondientes a la decodificación de las derivadas temporales tras la diferenciación simpléctica.*
-
+  <img src="media%20SLL-HNN/SLL_W_dot.png" alt="Pesos Lineales del Decoder">
+  <p><em>Matrices de pesos correspondientes a la decodificación de las derivadas temporales tras la diferenciación simpléctica.</em></p>
 </div>
 
 ---
@@ -92,7 +89,7 @@ A continuación se detalla el comportamiento interno de la red durante el proces
 ## 4. Descripción del Mejor Modelo
 * **Topología Optimizada:** Reducción estructural a una configuración compacta de 2 capas ocultas profundas con un ancho de 256 neuronas cada una.
 * **Huella de Memoria:** El modelo se condensa en un tamaño de 600 kB con un total exacto de 74,195 parámetros.
-* **Bifurcación Explícita:** Subred de energía cinética (T) restringida a una formulación analítica paramétrica explícita, separada estrictamente de la subred de energía potencial (V) aproximada mediante el MLP continuo.
+* **Bifurcación Explícita:** Subred de energía cinética ($T$) restringida a una formulación analítica paramétrica explícita, separada estrictamente de la subred de energía potencial ($V$) aproximada mediante el MLP continuo.
 * **Física Limpia:** La red prescinde por completo de estabilizadores numéricos artificiales, forzando al modelo a aprender la dinámica inmaculadamente sin ensuciar los datos físicos.
 
 ## 5. Predicciones del Modelo a Largo Plazo
@@ -101,16 +98,13 @@ A continuación se detalla el comportamiento interno de la red durante el proces
 * La configuración demuestra empíricamente que imponer invariantes físicos a través de activaciones pares mantiene la estabilidad, incluso bajo las restricciones representacionales de embeddings estrictamente lineales.
 
 ## 6. La Función de Activación Ganadora
-* La función de activación óptima demostró ser la función compuesta par f(x) = log(1 + x*tanh(x)).
+* La función de activación óptima demostró ser la función compuesta par $f(x)=\log(1+x\tanh(x))$.
 * El uso de esta función par previene el sobreajuste y mitiga la deriva numérica severa observada en redes tradicionales, alineándose con la simetría espacial de la física real, donde la energía potencial depende de términos pares de las distancias relativas.
 
 ## 7. Librerías Utilizadas
 * PyTorch
 * NumPy
 * Matplotlib
-* Torch
-* Scipy
-* Manim
 
 ## 8. Ecosistema de Repositorios de la Investigación
 
