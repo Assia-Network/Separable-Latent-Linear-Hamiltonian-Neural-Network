@@ -52,8 +52,11 @@ A lo largo de los cuatro bloques de experimentación, los componentes base de la
 ## 3. Flujograma e Internos de la Red (SLL-HNN)
 
 <div align="center">
-  <video src="media%20SLL-HNN/SLLHNNFlowchartAnimation.mp4" autoplay loop muted playsinline></video>
-  <p><em>Animación del flujo físico y matemático a través de la arquitectura SLL-HNN.</em></p>
+
+![Animación del flujo de la Arquitectura SLL-HNN](media%20SLL-HNN/SLLHNNFlowchartAnimation.gif)
+
+*Animación del flujo físico y matemático a través de la arquitectura SLL-HNN.*
+
 </div>
 
 El procesamiento de la arquitectura garantiza un desacoplamiento físico y dimensional estricto, estructurado en las siguientes etapas fundamentales:
