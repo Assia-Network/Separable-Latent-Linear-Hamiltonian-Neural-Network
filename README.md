@@ -136,11 +136,19 @@ To ensure the reproducibility and modularity of the results presented in the pap
   [https://github.com/jae-hoon-daniel-lee/hamiltonian-neural-networks-for-solar-system.git](https://github.com/jae-hoon-daniel-lee/hamiltonian-neural-networks-for-solar-system.git)
   Repository managed by my co-author, Jae Hoon Lee. It documents the baseline architecture of the research (Plausible HNN) and the experiments corresponding to the sparse network focused on parameter compression (Block Sparse P-HNN).
 
-## 9. About
+## 9. License
+
+This project is distributed under the **GNU General Public License v3.0 (GPL-3.0)**. 
+
+You are free to use, copy, modify, and distribute this software for academic and commercial purposes, provided that any derivative works are also open-source and released under the exact same GPL-3.0 license. For the full legal text, please refer to the [LICENSE](LICENSE) file included in this repository.
+
+## 10. About
 * **Authors:** Jae Hoon Lee and Jesus Martin Bautista Ramirez.
 * **Affiliations:** Open Stack Inc. / Universidad Peruana de Ciencias Aplicadas (UPC).
 * **DOI / Paper:** [Link pending publication]
 
 ### <a name="references"></a> References
+
+If the SLL-HNN architecture, the analytical approaches, or the code provided in this repository contribute to your academic or professional research, we kindly request that you cite our work:
 
 **[1]** Lee, J. H., & Bautista Ramirez, J. M. (In development). *Hamiltonian Neural Networks for Solar System*. Documentation, source code, and joint development available through the repositories listed in section 8.
