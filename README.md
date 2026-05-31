@@ -108,7 +108,7 @@ To demonstrate the physical and geometric fidelity of the SLL-HNN model, a real-
 
 <div align="center">
 
-<img src="media%20SLL-HNN/TU_ARCHIVO_MANIM.gif" alt="Real-Time Orbital Simulation with Manim">
+<video src="https://github.com/user-attachments/assets/2438ca2e-6301-49f6-af6e-aec51258287d" width="100%" autoplay loop muted playsinline></video>
 <p><em>Dynamic evolution of planetary trajectories predicted by the SLL-HNN.</em></p>
 
 </div>
