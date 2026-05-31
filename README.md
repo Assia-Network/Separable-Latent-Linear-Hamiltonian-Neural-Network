@@ -53,13 +53,11 @@ A lo largo de los cuatro bloques de experimentación, los componentes base de la
 
 <div align="center">
 
-![Animación del flujo de la Arquitectura SLL-HNN](media%20SLL-HNN/SLLHNNFlowchartAnimation.gif)
+<img src="media%20SLL-HNN/SLLHNNFlowchartAnimation.gif" alt="Animación del flujo de la Arquitectura SLL-HNN">
+<p><em>Animación del flujo físico y matemático a través de la arquitectura SLL-HNN.</em></p>
 
-*Animación del flujo físico y matemático a través de la arquitectura SLL-HNN.*
-
-![Diagrama Estático de la Arquitectura SLL-HNN](media%20SLL-HNN/Diagrama_SLL_HNN_English_UltraHD_Arquitecto.png)
-
-*Diagrama arquitectónico estructural estático de la SLL-HNN presentado en el artículo científico.*
+<img src="media%20SLL-HNN/Diagrama_SLL_HNN_English_UltraHD_Arquitecto.png" alt="Diagrama Estático de la Arquitectura SLL-HNN">
+<p><em>Diagrama arquitectónico estructural estático de la SLL-HNN presentado en el artículo científico.</em></p>
 
 </div>
 
@@ -104,6 +102,17 @@ A continuación se detalla el comportamiento interno de la red durante el proces
 * A pesar de variaciones orbitales sutiles inherentes al mapeo puramente lineal, los cuerpos evitan eyecciones no físicas y mantienen un estado gravitacionalmente ligado.
 * La configuración demuestra empíricamente que imponer invariantes físicos a través de activaciones pares mantiene la estabilidad, incluso bajo las restricciones representacionales de embeddings estrictamente lineales.
 
+### 5.1 Visualización Dinámica en Tiempo Real (Manim)
+
+Para demostrar la fidelidad física y geométrica del modelo SLL-HNN, se ha generado una animación matemática en tiempo real utilizando el motor gráfico **Manim**. Esta simulación visualiza el comportamiento orbital y la evolución de las trayectorias de los cuerpos celestes bajo las predicciones de nuestra arquitectura óptima, evidenciando la preservación de la estabilidad en el espacio:
+
+<div align="center">
+
+<img src="media%20SLL-HNN/TU_ARCHIVO_MANIM.gif" alt="Simulación Orbital en Tiempo Real con Manim">
+<p><em>Evolución dinámica de las trayectorias planetarias predichas por la SLL-HNN.</em></p>
+
+</div>
+
 ## 6. La Función de Activación Ganadora
 * La función de activación óptima demostró ser la función compuesta par $f(x)=\log(1+x\tanh(x))$.
 * El uso de esta función par previene el sobreajuste y mitiga la deriva numérica severa observada en redes tradicionales, alineándose con la simetría espacial de la física real, donde la energía potencial depende de términos pares de las distancias relativas.
@@ -112,6 +121,7 @@ A continuación se detalla el comportamiento interno de la red durante el proces
 * PyTorch
 * NumPy
 * Matplotlib
+* Manim *(Visualización Matemática de Órbitas)*
 
 ## 8. Ecosistema de Repositorios de la Investigación
 
