@@ -52,10 +52,15 @@ A lo largo de los cuatro bloques de experimentación, los componentes base de la
 ## 3. Flujograma e Internos de la Red (SLL-HNN)
 
 <div align="center">
-  <a href="ENLACE_COMPLETO_DE_TU_VIDEO_DE_YOUTUBE" target="_blank">
-    <img src="https://img.youtube.com/vi/ID_DE_TU_VIDEO/maxresdefault.jpg" alt="Animación del flujo de la Arquitectura SLL-HNN">
-  </a>
-  <p><em>Animación del flujo físico y matemático a través de la arquitectura SLL-HNN. Haz clic en la imagen para ver el video.</em></p>
+
+![Animación del flujo de la Arquitectura SLL-HNN](media%20SLL-HNN/SLLHNNFlowchartAnimation.gif)
+
+*Animación del flujo físico y matemático a través de la arquitectura SLL-HNN.*
+
+![Diagrama Estático de la Arquitectura SLL-HNN](media%20SLL-HNN/Diagrama_SLL_HNN_English_UltraHD_Arquitecto.png)
+
+*Diagrama arquitectónico estructural estático de la SLL-HNN presentado en el artículo científico.*
+
 </div>
 
 El procesamiento de la arquitectura garantiza un desacoplamiento físico y dimensional estricto, estructurado en las siguientes etapas fundamentales:
@@ -74,14 +79,16 @@ El procesamiento de la arquitectura garantiza un desacoplamiento físico y dimen
 A continuación se detalla el comportamiento interno de la red durante el proceso de optimización del mejor modelo (Experimentación 4):
 
 <div align="center">
-  <img src="media%20SLL-HNN/loss.png" alt="Curva de Pérdida del SLL-HNN">
-  <p><em>Evolución de la función de pérdida durante 1000 épocas para la arquitectura óptima SLL-HNN de 2 capas.</em></p>
 
-  <img src="media%20SLL-HNN/SLL_W_B.png" alt="Pesos Lineales y Sesgo del Encoder">
-  <p><em>Distribución de la matriz de pesos lineales y sesgo (bias) en la fase de codificación (Encoder) hacia el espacio latente.</em></p>
+<img src="media%20SLL-HNN/loss.png" alt="Curva de Pérdida del SLL-HNN">
+<p><em>Evolución de la función de pérdida durante 1000 épocas para la arquitectura óptima SLL-HNN de 2 capas.</em></p>
 
-  <img src="media%20SLL-HNN/SLL_W_dot.png" alt="Pesos Lineales del Decoder">
-  <p><em>Matrices de pesos correspondientes a la decodificación de las derivadas temporales tras la diferenciación simpléctica.</em></p>
+<img src="media%20SLL-HNN/SLL_W_B.png" alt="Pesos Lineales y Sesgo del Encoder">
+<p><em>Distribución de la matriz de pesos lineales y sesgo (bias) en la fase de codificación (Encoder) hacia el espacio latente.</em></p>
+
+<img src="media%20SLL-HNN/SLL_W_dot.png" alt="Pesos Lineales del Decoder">
+<p><em>Matrices de pesos correspondientes a la decodificación de las derivadas temporales tras la diferenciación simpléctica.</em></p>
+
 </div>
 
 ---
