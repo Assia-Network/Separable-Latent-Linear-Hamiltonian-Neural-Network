@@ -53,7 +53,7 @@ Throughout the four experimental blocks, the core components of the architecture
 
 <div align="center">
 
-<img src="media%20SLL-HNN/SLLHNNFlowchartAnimation.gif" alt="SLL-HNN Architecture Flowchart Animation">
+<video src="media%20SLL-HNN/SLLHNNFlowchartAnimation.webm" width="100%" autoplay loop muted playsinline></video>
 <p><em>Animation of the physical and mathematical flow through the SLL-HNN architecture.</em></p>
 
 <img src="media%20SLL-HNN/Diagrama_SLL_HNN_English_UltraHD_Arquitecto.png" alt="Static Diagram of the SLL-HNN Architecture">
