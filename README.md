@@ -108,7 +108,7 @@ To demonstrate the physical and geometric fidelity of the SLL-HNN model, a real-
 
 <div align="center">
 
-<video src="[https://github.com/user-attachments/assets/2438ca2e-6301-49f6-af6e-aec51258287d](https://github.com/user-attachments/assets/cb88eea0-18ae-466a-85c7-3c697d564192)" width="100%" autoplay loop muted playsinline></video>
+<video src="https://github.com/user-attachments/assets/686a3c35-8c30-4482-b2c2-074403390510" width="100%" autoplay loop muted playsinline></video>
 <p><em>Dynamic evolution of planetary trajectories predicted by the SLL-HNN.</em></p>
 
 </div>
